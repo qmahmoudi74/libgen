@@ -17,6 +17,9 @@ dependencies:
   '@emotion/styled':
     specifier: ^11.11.0
     version: 11.11.0(@emotion/react@11.11.4)(@types/react@18.2.61)(react@18.2.0)
+  '@tanstack/query-core':
+    specifier: ^5.24.1
+    version: 5.24.1
   '@tanstack/react-query':
     specifier: ^5.24.1
     version: 5.24.1(react@18.2.0)
@@ -32,6 +35,9 @@ dependencies:
   jotai:
     specifier: ^2.7.0
     version: 2.7.0(@types/react@18.2.61)(react@18.2.0)
+  jotai-tanstack-query:
+    specifier: ^0.8.5
+    version: 0.8.5(@tanstack/query-core@5.24.1)(jotai@2.7.0)(wonka@6.3.4)
   next:
     specifier: 14.1.1
     version: 14.1.1(react-dom@18.2.0)(react@18.2.0)
@@ -44,6 +50,9 @@ dependencies:
   sharp:
     specifier: ^0.33.2
     version: 0.33.2
+  wonka:
+    specifier: ^6.3.4
+    version: 6.3.4
 
 devDependencies:
   '@tanstack/eslint-plugin-query':
@@ -3594,6 +3603,18 @@ packages:
       '@pkgjs/parseargs': 0.11.0
     dev: true
 
+  /jotai-tanstack-query@0.8.5(@tanstack/query-core@5.24.1)(jotai@2.7.0)(wonka@6.3.4):
+    resolution: {integrity: sha512-cFq+1sE7Qkt7Kh9Db2KE8LXdbPiGwCiy8S5YSEnjUDxF59A4XhoXTDJBuPiMIA1dD1/yMsNKr1ADfN5CvscYZw==}
+    peerDependencies:
+      '@tanstack/query-core': '*'
+      jotai: '>=2.0.0'
+      wonka: ^6.3.4
+    dependencies:
+      '@tanstack/query-core': 5.24.1
+      jotai: 2.7.0(@types/react@18.2.61)(react@18.2.0)
+      wonka: 6.3.4
+    dev: false
+
   /jotai@2.7.0(@types/react@18.2.61)(react@18.2.0):
     resolution: {integrity: sha512-4qsyFKu4MprI39rj2uoItyhu24NoCHzkOV7z70PQr65SpzV6CSyhQvVIfbNlNqOIOspNMdf5OK+kTXLvqe63Jw==}
     engines: {node: '>=12.20.0'}
@@ -4706,6 +4727,10 @@ packages:
     dependencies:
       isexe: 2.0.0
     dev: true
+
+  /wonka@6.3.4:
+    resolution: {integrity: sha512-CjpbqNtBGNAeyNS/9W6q3kSkKE52+FjIj7AkFlLr11s/VWGUu6a2CdYSdGxocIhIVjaW/zchesBQUKPVU69Cqg==}
+    dev: false
 
   /wrap-ansi@7.0.0:
     resolution: {integrity: sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==}

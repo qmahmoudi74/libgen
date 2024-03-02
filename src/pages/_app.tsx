@@ -1,6 +1,7 @@
 import { type DehydratedProps } from "globals";
 import type { AppProps } from "next/app";
 import AppChakraProvider from "providers/AppChakraProvider";
+import AppJotaiProvider from "providers/AppJotaiProvider";
 import AppQueryClientProvider from "providers/AppQueryClientProvider";
 import type { FC } from "react";
 
@@ -10,7 +11,9 @@ const App: FC<Props> = ({ Component, pageProps }) => {
   return (
     <AppChakraProvider>
       <AppQueryClientProvider dehydratedState={pageProps.dehydratedState}>
-        <Component {...pageProps} />
+        <AppJotaiProvider>
+          <Component {...pageProps} />
+        </AppJotaiProvider>
       </AppQueryClientProvider>
     </AppChakraProvider>
   );
