@@ -1,0 +1,26 @@
+{
+  "root": true,
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@tanstack/eslint-plugin-query/recommended",
+    "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "no-relative-import-paths"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": true },
+  "ignorePatterns": ["*js"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "arrow-body-style": ["off"],
+    "prefer-arrow-callback": ["off"],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      { "fixStyle": "inline-type-imports" }
+    ],
+    "no-relative-import-paths/no-relative-import-paths": [
+      "error",
+      { "rootDir": "src" }
+    ]
+  }
+}
